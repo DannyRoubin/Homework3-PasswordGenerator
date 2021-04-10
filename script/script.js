@@ -17,28 +17,22 @@ function writePassword() {
 //Here is where I have the java to ask the user all the questions
 //for their password
 var generatePassword = function() {
-  //sets default value to 0
-  var lower = 0;
-  var upper = 0;
-  var special = 0;
+
 var length = window.prompt("Enter a number between 8 and 128:");
-if (!length) {
+if (length<8) {
   return;
 }
   var lower = window.confirm("Would you like lowercase letters?");
-  //if confirmed, then it changes the value of lower to 1 for later
-  if (confirm (lower = 1))
   var upper = window.confirm("Would you like uppercasecase letters?");
-  if (confirm (upper = 1))
+  var number = window.confirm("Would you like numbers?");
   var special = window.confirm("Would you like special characters?");
-  if (confirm (special = 1))
 
 
 //my bridge from the math functions to displaying the password
 var randomfunc = {
   lower: getRanLow,
   upper: getRanUp,
-  Number: getRanNum,
+  number: getRanNum,
   special: getRanSpec
 }
 
@@ -63,11 +57,20 @@ function getRanSpec() {
   return String.fromCharCode(Math.floor(Math.random() * 15) + 32);
   
  }
+//NOTE FOR SELF MAKE AN ARRAY WITH ALL MY VALUES 
+//NO MAKE TWO ONE TO GUARATNEE ONE OF EACH VARIABLE GETS IN AND ANOTHER
+// TO MAKE IT RANDOM 
+
+//first array here checks what is included then will print those out
+var randomLetters = [lower, upper, number, special];
+
+console.log(randomLetters)
+
+
 //computes the password here
-var i;
-for (i = 0; i < length;) {
-if (lower == 1) {
-  console.log (lower)
+ for (var i = 0; i < length; i++) {
+if (lower) {
+  writePassword ;
 } 
 }
 }
