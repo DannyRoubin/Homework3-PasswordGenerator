@@ -33,8 +33,8 @@ var generatePassword = function() {
 
   //asks user how long they want their password to be
 var length = window.prompt("Enter a number between 8 and 128:");
-if (length < 8) {
-  return;
+if (length < 8 || length > 128)  {
+  return "";
 }
 //asks for lowercase letters
   var lower = window.confirm("Would you like lowercase letters?");
@@ -60,6 +60,9 @@ if (length < 8) {
 //sets new password as an array
  var newPassword = [];
 
+ if (newPassword.length = 0){
+   return ""
+ }
  //pushes random character from the random index the amount of times 
  //the length is
 for(var i = 0 ; i < length; i++) {

@@ -1,5 +1,8 @@
 # Homework3-PasswordGenerator
 
+## Link to live website
+https://dannyroubin.github.io/Homework3-PasswordGenerator/
+
 ## Description
 The goal of this project was to create a password generator that would produce a secure password for an employee looking to obtain a secure password.
 
